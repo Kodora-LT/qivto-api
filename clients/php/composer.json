@@ -1,0 +1,8 @@
+{
+  "name": "qivto/api-client",
+  "description": "Lightweight PHP client for the QIVTO Public API",
+  "type": "library",
+  "license": "MIT",
+  "require": {"php": ">=8.1", "ext-json": "*"},
+  "autoload": {"psr-4": {"Qivto\\Api\\": "src/"}}
+}

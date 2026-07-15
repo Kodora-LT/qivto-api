@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible client, example or API documentation problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: input
+    id: component
+    attributes: {label: Component, placeholder: "PHP client, JavaScript client, Python client, OpenAPI or example"}
+    validations: {required: true}
+  - type: textarea
+    id: reproduce
+    attributes: {label: Reproduction steps}
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes: {label: Expected and actual result}
+    validations: {required: true}
+  - type: input
+    id: environment
+    attributes: {label: Runtime and version}
+    validations: {required: true}
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I removed API credentials and personal data from this report.
+          required: true

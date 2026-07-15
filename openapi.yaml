@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: QIVTO Public API
+  version: 1.1.0
+  description: Free utility endpoints for tool discovery, UUID generation, hashing and JSON formatting.
+  contact:
+    url: https://qivto.com/en/contact
+servers:
+  - url: https://qivto.com/api/v1
+paths:
+  /tools:
+    get:
+      summary: List active QIVTO tools
+      parameters:
+        - name: lang
+          in: query
+          schema: {type: string, enum: [en, lt], default: en}
+      responses:
+        '200': {description: Tool catalog}
+  /uuid:
+    post:
+      summary: Generate UUID v4 values
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                count: {type: integer, minimum: 1, maximum: 100, default: 1}
+      responses:
+        '200': {description: Generated identifiers}
+        '429': {description: Rate limit exceeded}
+  /hash:
+    post:
+      summary: Hash text
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [text]
+              properties:
+                algorithm: {type: string, default: sha256}
+                text: {type: string, maxLength: 1000000}
+      responses:
+        '200': {description: Calculated digest}
+        '422': {description: Invalid input}
+  /json-format:
+    post:
+      summary: Validate and format JSON
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [json]
+              properties:
+                json: {}
+      responses:
+        '200': {description: Formatted JSON string}
+        '422': {description: Invalid JSON}
+  /status:
+    get:
+      summary: Read API status and version
+      responses:
+        '200': {description: Service health}

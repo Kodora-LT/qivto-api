@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QIVTO Tool Catalog Example</title></head>
+<body>
+<main><h1>QIVTO tools</h1><label>Search <input id="search" type="search"></label><p id="status">Loading…</p><ul id="tools"></ul></main>
+<script type="module">
+import {QivtoClient} from '../../clients/javascript/src/index.js';
+const client=new QivtoClient(),list=document.querySelector('#tools'),status=document.querySelector('#status'),search=document.querySelector('#search');
+const data=await client.tools('en');status.textContent=`${data.count} tools loaded.`;
+const render=()=>{const query=search.value.toLowerCase();list.innerHTML=data.tools.filter(tool=>(tool.name+' '+tool.description).toLowerCase().includes(query)).map(tool=>`<li><strong>${tool.name}</strong> – ${tool.description}</li>`).join('')};
+search.addEventListener('input',render);render();
+</script>
+</body>
+</html>
