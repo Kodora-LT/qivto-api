@@ -1,5 +1,9 @@
 # QIVTO API
 
+[![API status](https://img.shields.io/website?url=https%3A%2F%2Fqivto.com%2Fapi%2Fv1%2Fstatus&label=QIVTO%20API)](https://qivto.com/en/api-status)
+[![GitHub release](https://img.shields.io/github/v/release/Kodora-LT/qivto-api)](https://github.com/Kodora-LT/qivto-api/releases)
+[![OpenAPI 3.1](https://img.shields.io/badge/OpenAPI-3.1-6BA539)](openapi.yaml)
+
 Official open-source clients, examples and OpenAPI specification for the free [QIVTO Public API](https://qivto.com/en/api).
 
 ## Available endpoints
@@ -29,6 +33,12 @@ Public limit: 60 requests per minute per session
 - `examples/browser-tool-catalog` – searchable tool catalog in a single HTML file.
 - `examples/php-hash` – minimal PHP hash form using the public API.
 - `examples/python-uuid` – command-line UUID generator.
+
+Additional ready-to-publish demos are available in `examples/codepen-hash`, `examples/stackblitz-tool-catalog` and `examples/replit-python`. Every mini project includes a visible [Built with QIVTO API](https://qivto.com/en/api) attribution link.
+
+## Package registries
+
+Registry-ready metadata is included for Packagist, npm and PyPI. Publishing requires the QIVTO owner account for each registry. Follow [PUBLISHING.md](PUBLISHING.md).
 
 ## Error handling
 

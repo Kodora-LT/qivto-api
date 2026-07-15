@@ -2,10 +2,16 @@
   "name": "@qivto/api-client",
   "version": "1.1.0",
   "description": "JavaScript client for the QIVTO Public API",
+  "keywords": ["qivto", "api", "uuid", "json", "hash"],
+  "homepage": "https://qivto.com/en/api",
+  "repository": {"type": "git", "url": "git+https://github.com/Kodora-LT/qivto-api.git", "directory": "clients/javascript"},
+  "bugs": {"url": "https://github.com/Kodora-LT/qivto-api/issues"},
+  "files": ["src", "README.md"],
   "type": "module",
   "main": "src/index.js",
   "exports": "./src/index.js",
   "license": "MIT",
+  "publishConfig": {"access": "public"},
   "engines": {"node": ">=18"},
   "scripts": {"test": "node --test"}
 }

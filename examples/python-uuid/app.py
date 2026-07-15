@@ -7,3 +7,4 @@ args = parser.parse_args()
 
 for value in QivtoClient().uuid(args.count)["values"]:
     print(value)
+print("\nBuilt with QIVTO API: https://qivto.com/en/api")

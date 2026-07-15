@@ -6,9 +6,18 @@ build-backend = "setuptools.build_meta"
 name = "qivto-api-client"
 version = "1.1.0"
 description = "Python client for the QIVTO Public API"
+readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
+authors = [{name = "Kodora-LT"}]
+keywords = ["qivto", "api", "uuid", "json", "hash"]
+classifiers = ["Development Status :: 4 - Beta", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
 dependencies = []
+
+[project.urls]
+Homepage = "https://qivto.com/en/api"
+Repository = "https://github.com/Kodora-LT/qivto-api"
+Issues = "https://github.com/Kodora-LT/qivto-api/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

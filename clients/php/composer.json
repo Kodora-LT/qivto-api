@@ -1,8 +1,12 @@
 {
   "name": "qivto/api-client",
   "description": "Lightweight PHP client for the QIVTO Public API",
+  "keywords": ["qivto", "api", "uuid", "json", "hash"],
+  "homepage": "https://qivto.com/en/api",
   "type": "library",
   "license": "MIT",
+  "authors": [{"name": "Kodora-LT", "homepage": "https://github.com/Kodora-LT"}],
+  "support": {"issues": "https://github.com/Kodora-LT/qivto-api/issues", "source": "https://github.com/Kodora-LT/qivto-api"},
   "require": {"php": ">=8.1", "ext-json": "*"},
   "autoload": {"psr-4": {"Qivto\\Api\\": "src/"}}
 }
